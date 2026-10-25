@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="description" content="">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0e0e0e" data-meta="themeColor">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" data-meta="favicon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/borromean.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-slot="skip-label">Skip to main content</a>
+
+<header class="bar">
+  <a class="logo" href="#top" aria-label="Back to top" data-slot="brand"></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="sr">Menu</span>
+  </button>
+  <nav id="site-nav" aria-label="Primary" data-slot="nav"></nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero on-sea" aria-labelledby="hero-title" data-slot="hero">
+  <div class="in">
+    <div class="hero-layout">
+      <!-- LEFT: existing portfolio content -->
+      <div class="hero-content">
+        <h1 id="hero-title" data-slot="hero-title"></h1>
+
+        <div class="hero-row">
+          <p class="lede" data-slot="hero-lede"></p>
+          <div class="cta" data-slot="hero-cta"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: interactive Borromean rings -->
+      <div class="hero-art" aria-label="Interactive Borromean rings">
+        <canvas
+          id="borromean-canvas"
+          role="img"
+          aria-label="Three rotating, triangulated Borromean rings"
+        ></canvas>
+      </div>
+    </div>
+
+    <!-- Existing footer links -->
+    <div class="hero-foot">
+      <ul class="links" aria-label="Contact links" data-slot="hero-links"></ul>
+    </div>
+  </div>
+</section>
+
+  <section id="projects" class="sec" aria-labelledby="projects-title" data-slot="projects">
+    <div class="in">
+      <h2 id="projects-title" data-slot="projects-heading"></h2>
+      <ul class="projects" data-slot="project-list"></ul>
+    </div>
+  </section>
+
+  <section id="about" class="sec about" aria-labelledby="about-title" data-slot="about">
+    <div class="in">
+      <h2 id="about-title" data-slot="about-heading"></h2>
+      <div class="cols">
+        <p class="lead" data-slot="about-lead"></p>
+        <div>
+          <h3 class="sub" data-slot="about-highlights-heading"></h3>
+          <ul class="plain" data-slot="about-highlights"></ul>
+          <h3 class="sub" data-slot="about-tools-heading"></h3>
+          <ul class="tags" aria-label="Tools" data-slot="about-tools"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sec contact on-sea" aria-labelledby="contact-title" data-slot="contact">
+    <div class="in">
+      <h2 id="contact-title" data-slot="contact-heading"></h2>
+      <a class="mail" href="#" data-slot="contact-email"></a>
+      <ul class="links" aria-label="Other ways to reach me" data-slot="contact-links"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <p>&copy; <span id="yr">2026</span> <span data-slot="footer-name"></span></p>
+    <a data-slot="footer-source" href="#"></a>
+  </div>
+</footer>
+
+<noscript>
+  <div style="max-width:44rem;margin:4rem auto;padding:0 1.5rem;font-family:system-ui,sans-serif;line-height:1.6;color:#0e0e0e">
+    <h1 style="font-size:1.5rem;margin-bottom:1rem">This site needs JavaScript to render its content.</h1>
+    <p>If you'd like to see the projects, about, and contact information, please enable JavaScript, or reach me at
+      <a href="mailto:you@example.com" style="text-decoration:underline">you@example.com</a>.</p>
+  </div>
+</noscript>
+
+</body>
+</html>
